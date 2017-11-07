@@ -72,8 +72,8 @@ class CoursePage extends React.Component {
 //if defined mapDispatchToProps, will has createCourse, no dispatch 
 CoursePage.propTypes = {
   //dispatch: React.PropTypes.func.isRequired,
-  courses: React.PropTypes.array.isRequired,
-  createCourse: React.PropTypes.func.isRequired
+  courses: React.PropTypes.array.isRequired
+  // createCourse: React.PropTypes.func.isRequired
 }
 
 function mapStateToProps(state,ownProps) {
@@ -89,11 +89,11 @@ function mapDispatchToProps(dispatch) {
     //when not using bindActionCreators
     // createCourse: course=> dispatch(courseActions.createCourse(course))
 
-    //using bindActionCreators to map all actions in courseActions , 
-    // actions: bindActionCreators(courseActions, dispatch),
+    // using bindActionCreators to map all actions in courseActions , 
+    actions: bindActionCreators(courseActions, dispatch)
 
     //using bindActionCreators to map specific actions
-    createCourse: bindActionCreators(courseActions.createCourse, dispatch)
+    // createCourse: bindActionCreators(courseActions.createCourse, dispatch)
   };
 }
 
