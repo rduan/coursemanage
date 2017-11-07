@@ -11,18 +11,36 @@ class ManageCoursePage extends Component {
 
     this.state = {
       course: Object.assign({}, this.props.course),
-      allAuthors: Object.assign({}, this.props.authors),
+      // allAuthors: Object.assign({}, this.props.authors),
       errors: {}
     }
+
+    this.updateCourseState = this.updateCourseState.bind(this);
+    this.saveCourse = this.saveCourse.bind(this);
   }
+
+  updateCourseState(event){
+    const field= event.target.name;
+    let course=this.state.course;
+    course[field] = event.target.value;
+    return this.setState({course});
+  }
+
+  saveCourse(event) {
+    event.preventDefault();
+    this.props.actions.saveCourse(this.state.course);
+  }
+
   render() {
     return (
       <div>
         <h1>Mnage course</h1>
         <CourseForm 
-          course={this.props.course}
+          course={this.state.course}
           allAuthors = {this.props.authors}
           errors = {this.state.errors}
+          onSave={this.onSave}
+          onChange = {this.updateCourseState}
            />
 
       </div>

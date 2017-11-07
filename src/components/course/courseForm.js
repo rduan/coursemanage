@@ -14,7 +14,6 @@ const CourseForm = ({course, allAuthors,onSave,onChange,loading,errors})=>{
   
   return (
     <form>
-      <h1>Mnage course</h1>
       <TextInput
         name="title"
         label="Title"
@@ -23,7 +22,7 @@ const CourseForm = ({course, allAuthors,onSave,onChange,loading,errors})=>{
          />
 
       <SelectInput
-        name="authorid"
+        name="authorId"
         label="Author"
         value={course.authorId}
         defaultOption="select author"

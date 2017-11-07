@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
 
 const SelectInput = ({name, label,onChange, defaultOption, value, error, options}) => {
-  console.log('from select,',options)
+  // console.log('from select,',options);
+  console.log('select value: ',value);
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
