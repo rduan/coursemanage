@@ -56,7 +56,6 @@ class ManageCoursePage extends Component {
   render() {
     return (
       <div>
-        <h1>Mnage course</h1>
         <CourseForm 
           course={this.state.course}
           allAuthors = {this.props.authors}

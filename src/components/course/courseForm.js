@@ -14,6 +14,7 @@ const CourseForm = ({course, allAuthors,onSave,onChange,saving,errors})=>{
   
   return (
     <form>
+      <h1>Manage course</h1>
       <TextInput
         name="title"
         label="Title"
