@@ -8,7 +8,7 @@ function setup(saving) {
   let props ={
     course: {},
     saving,
-    error: {}, 
+    errors: {}, 
     onSave:  () => {},
     onChange: ()=>{}
 

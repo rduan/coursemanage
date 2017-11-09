@@ -3,15 +3,8 @@ import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
 
 const CourseForm = ({course, allAuthors,onSave,onChange,saving,errors})=>{
-  // error={errors.title}
-  // error={errors.authorId}
-  // error={errors.category} 
-  // error={errors.title} 
-  // console.log('====================================');
-  // console.log(allAuthors);
-  // console.log(course);
-  // console.log('====================================');
   
+  console.log(errors.title)
   return (
     <form>
       <h1>Manage course</h1>
@@ -20,6 +13,7 @@ const CourseForm = ({course, allAuthors,onSave,onChange,saving,errors})=>{
         label="Title"
         value={course.title}
         onChange={onChange}
+        error={errors.title}
          />
 
       <SelectInput
@@ -29,6 +23,7 @@ const CourseForm = ({course, allAuthors,onSave,onChange,saving,errors})=>{
         defaultOption="select author"
         options={allAuthors}
         onChange={onChange}
+        error={errors.authorId}
          />
 
       <TextInput
@@ -36,6 +31,7 @@ const CourseForm = ({course, allAuthors,onSave,onChange,saving,errors})=>{
         label="Category"
         value={course.category}
         onChange={onChange}
+        error={errors.category} 
         />
 
         <TextInput
