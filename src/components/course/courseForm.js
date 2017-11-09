@@ -4,7 +4,7 @@ import SelectInput from '../common/SelectInput';
 
 const CourseForm = ({course, allAuthors,onSave,onChange,saving,errors})=>{
   
-  console.log(errors.title)
+  // console.log(errors.title)
   return (
     <form>
       <h1>Manage course</h1>
